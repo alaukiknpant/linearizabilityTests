@@ -41,14 +41,5 @@ public class QueueSynchronized  {
         }
 
     }
-
-    public String toString() {
-        return "QueueWithoutAnySync{" +
-                "indGet=" + indGet +
-                ", indPut=" + indPut +
-                ", countElements=" + countElements +
-                ", items=" + Arrays.toString(items) +
-                '}';
-    }
 }
 

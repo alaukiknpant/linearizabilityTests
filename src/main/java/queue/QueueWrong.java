@@ -42,7 +42,7 @@ package queue;
 
 import java.util.Arrays;
 
-public class QueueWrong {
+public class QueueRight {
     private int indGet;
     private int indPut;
     private int countElements;
@@ -62,7 +62,7 @@ public class QueueWrong {
 
     }
 
-    public void put(int x) throws Exception {
+    public synchronized void put(int x) throws Exception {
         if (countElements == items.length) {
             throw new Exception("Queue is full");
         }
@@ -71,7 +71,7 @@ public class QueueWrong {
         countElements++;
     }
 
-    public int get() throws Exception {
+    public synchronized int get() throws Exception {
         if (countElements == 0) {
             throw new Exception("Queue is empty");
         }
